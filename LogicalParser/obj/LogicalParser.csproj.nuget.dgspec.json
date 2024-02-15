@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Алексей\\source\\repos\\LogicalParser\\LogicalParser\\LogicalParser\\LogicalParser.csproj": {}
+    "C:\\Users\\Алексей\\Source\\Repos\\LogicalParserA\\LogicalParser\\LogicalParser.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Алексей\\source\\repos\\LogicalParser\\LogicalParser\\LogicalParser\\LogicalParser.csproj": {
+    "C:\\Users\\Алексей\\Source\\Repos\\LogicalParserA\\LogicalParser\\LogicalParser.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Алексей\\source\\repos\\LogicalParser\\LogicalParser\\LogicalParser\\LogicalParser.csproj",
+        "projectUniqueName": "C:\\Users\\Алексей\\Source\\Repos\\LogicalParserA\\LogicalParser\\LogicalParser.csproj",
         "projectName": "LogicalParser",
-        "projectPath": "C:\\Users\\Алексей\\source\\repos\\LogicalParser\\LogicalParser\\LogicalParser\\LogicalParser.csproj",
+        "projectPath": "C:\\Users\\Алексей\\Source\\Repos\\LogicalParserA\\LogicalParser\\LogicalParser.csproj",
         "packagesPath": "C:\\Users\\Алексей\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Алексей\\source\\repos\\LogicalParser\\LogicalParser\\LogicalParser\\obj\\",
+        "outputPath": "C:\\Users\\Алексей\\Source\\Repos\\LogicalParserA\\LogicalParser\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

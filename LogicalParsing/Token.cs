@@ -5,17 +5,18 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace LogicalParsing;
-internal class Token(Token.TYPES Type, string StringValue, int Precendency) // тип, строковый вид, приоритет
+
+internal enum TokenType
 {
-    internal enum TYPES
-    {
-        LEFT_BRACKET, // (
-        RIGTH_BRACKET, // )
-        VARIABLE, // A B C D или че угодно блять хоть й
-        CONSTANT, // true либо false
-        UNARY_OPERATOR, // логическое отрицание !
-        BINARY_OPERATOR // || , &&, =>, ==
-    }
+    LEFT_BRACKET, // (
+    RIGTH_BRACKET, // )
+    VARIABLE, // A B C D или че угодно блять хоть й
+    CONSTANT, // true либо false
+    UNARY_OPERATOR, // логическое отрицание !
+    BINARY_OPERATOR // || , &&, =>, ==
+}
+internal class Token(TokenType Type, string StringValue, int Precendency) // тип, строковый вид, приоритет
+{
     //как блять в арифметическом парсере
     //матвей - твоя работа
 
