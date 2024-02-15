@@ -10,8 +10,9 @@ namespace LogicalParsing;
 /// </summary>
 /// <param name="Header"></param>
 /// <param name="Table"></param>
-internal class TruthTable(List<string> Header, List<List<bool>> Table)
+internal class TruthTable(List<string> header, List<List<bool>> Table)
 {
+    List<string> Header { get; init; } = header;
     // будет такая хуйня типа выражение A && B || !C
     // Headers = {"A", "B", "C"}
     // Table
