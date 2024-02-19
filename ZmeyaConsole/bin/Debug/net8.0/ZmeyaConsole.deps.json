@@ -1,0 +1,64 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "ZmeyaConsole/1.0.0": {
+        "dependencies": {
+          "ClassLibrary1": "1.0.0",
+          "MyZmei": "1.0.0"
+        },
+        "runtime": {
+          "ZmeyaConsole.dll": {}
+        }
+      },
+      "ClassLibrary1/1.0.0": {
+        "runtime": {
+          "ClassLibrary1.dll": {}
+        }
+      },
+      "LogicalParsing/1.0.0": {
+        "dependencies": {
+          "ClassLibrary1": "1.0.0"
+        },
+        "runtime": {
+          "LogicalParsing.dll": {}
+        }
+      },
+      "MyZmei/1.0.0": {
+        "dependencies": {
+          "ClassLibrary1": "1.0.0",
+          "LogicalParsing": "1.0.0"
+        },
+        "runtime": {
+          "MyZmei.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ZmeyaConsole/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ClassLibrary1/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "LogicalParsing/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MyZmei/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

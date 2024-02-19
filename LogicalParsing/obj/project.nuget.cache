@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "HeDIYJvBkjViHsAPYJaIgKyhzd34O42rEAVAmeUnDzlDiX810ec0KSm27Mh3sQu6PNnFUdhl2aSHZECktlcd3A==",
+  "dgSpecHash": "TbvlVxjAVy6dfcRXTolr33ZDd2zSW5ZVBlCWb/ULP+ohLpvDu5uhDgIsMcxV18Uyw0CIsdBgFu6XLPr/ss92SA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Алексей\\Source\\Repos\\LogicalParserA\\LogicalParsing\\LogicalParsing.csproj",
+  "projectFilePath": "C:\\Users\\Алексей\\Source\\Repos\\LogicalParser\\LogicalParsing\\LogicalParsing.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
