@@ -14,8 +14,8 @@ namespace LogicalParsing;
 /// <param name="Table"></param>
 public class TruthTable(List<string> header, List<List<bool>> table)
 {
-    List<string> Headers { get; init; } = header;
-    List<List<bool>> Table { get; init; } = table;
+    public List<string> Headers { get; init; } = header;
+    public List<List<bool>> Table { get; init; } = table;
     // будет такая хуйня типа выражение A && B || !C
     // Headers = {"A", "B", "C"}
     // Table
@@ -28,7 +28,8 @@ public class TruthTable(List<string> header, List<List<bool>> table)
     // {true, true, false, true}
     // {true, true, true, true}
     // типа первые n столбцов это переменные в порядке хидера
-    // а дальше результат значения выражения
+    // а дальше результат значения выраженияфух
+
     // 
     /// <summary>
     /// Заполняет таблицу истинности для данной функции

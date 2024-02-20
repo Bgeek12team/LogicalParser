@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace LogicalParsing;
-internal class DNF
+public class DNF
 {
     internal static DNF ToDNF(TruthTable truthTable)
     {

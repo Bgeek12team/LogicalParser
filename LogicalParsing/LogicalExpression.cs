@@ -24,13 +24,13 @@
 public class LogicalExpression(string Expression)
 {
     TruthTable truthTable;
-    internal DNF GetDNF()
+    public DNF GetDNF()
     {
         truthTable ??= TruthTable.FillTable(new ClassLibrary1.Expression(Expression));
         return DNF.ToDNF(truthTable);
     }
 
-    internal KNF GetKNF()
+    public KNF GetKNF()
     {
         truthTable ??= TruthTable.FillTable(new ClassLibrary1.Expression(Expression));
         return KNF.ToKNF(truthTable);

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace LogicalParsing;
-internal class KNF
+public class KNF
 {
     internal static KNF ToKNF(TruthTable truthTable)
     {

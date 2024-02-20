@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MyZmei")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7cc381434dea2f0086be15984d24faf46f85cdf8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3d34137d4630cfb17aa45486ccea86550fdddfd4")]
 [assembly: System.Reflection.AssemblyProductAttribute("MyZmei")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MyZmei")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
