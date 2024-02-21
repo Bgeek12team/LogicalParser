@@ -319,4 +319,9 @@ public class Expression(string expression)
         }
 
     }
+
+    public override string ToString()
+    {
+        return StringExpression;
+    }
 }
