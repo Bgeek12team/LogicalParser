@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using ClassLibrary1;
 namespace LogicalParsing;
-public class KNF(LogicalExpression exp)
+public class KNF(Expression exp)
 {
-    LogicalExpression LogicalExpression { get; init; } = exp;
+    Expression LogicalExpression { get; init; } = exp;
 
     internal static KNF ToKNF(TruthTable truthTable)
     {

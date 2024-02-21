@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ClassLibrary1;
 
 namespace LogicalParsing;
-public class DNF(LogicalExpression exp)
+public class DNF(Expression exp)
 {
-    LogicalExpression LogicalExpression { get; init; } = exp;
+    Expression LogicalExpression { get; init; } = exp;
     internal static DNF ToDNF(TruthTable truthTable)
     {
         return default;
