@@ -26,7 +26,7 @@ public static class MinFunction
 
 public static class SortFunction
 {
-    public static string StringValue = "по_ранжиру_и_по_жиру";
+    public static string StringValue = "sort";
     public static string CalculateResult(string exp)
     {
         var l = exp.Trim().Split(' ');

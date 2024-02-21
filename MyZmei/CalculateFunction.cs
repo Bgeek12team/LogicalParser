@@ -2,7 +2,7 @@
 
 public static class CalculateFunction
 {
-    public static string StringValue = "чему_равно";
+    public static string StringValue = "calc";
     public static string CalculateResult(string exp, Dictionary<VariableName, VariableValue> args)
     {
         var resExp = new ClassLibrary1.Expression(exp);

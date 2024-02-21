@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Алексей\\Source\\Repos\\LogicalParser123\\ClassLibrary1\\ClassLibrary1.csproj": {}
+    "C:\\Users\\Алексей\\source\\repos\\LogicalParser123\\ClassLibrary1\\ClassLibrary1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Алексей\\Source\\Repos\\LogicalParser123\\ClassLibrary1\\ClassLibrary1.csproj": {
+    "C:\\Users\\Алексей\\source\\repos\\LogicalParser123\\ClassLibrary1\\ClassLibrary1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Алексей\\Source\\Repos\\LogicalParser123\\ClassLibrary1\\ClassLibrary1.csproj",
+        "projectUniqueName": "C:\\Users\\Алексей\\source\\repos\\LogicalParser123\\ClassLibrary1\\ClassLibrary1.csproj",
         "projectName": "ClassLibrary1",
-        "projectPath": "C:\\Users\\Алексей\\Source\\Repos\\LogicalParser123\\ClassLibrary1\\ClassLibrary1.csproj",
+        "projectPath": "C:\\Users\\Алексей\\source\\repos\\LogicalParser123\\ClassLibrary1\\ClassLibrary1.csproj",
         "packagesPath": "C:\\Users\\Алексей\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Алексей\\Source\\Repos\\LogicalParser123\\ClassLibrary1\\obj\\",
         "projectStyle": "PackageReference",

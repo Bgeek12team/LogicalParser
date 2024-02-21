@@ -71,9 +71,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Алексей\\Source\\Repos\\LogicalParser123\\ZmeyaConsole\\ZmeyaConsole.csproj",
+      "projectUniqueName": "C:\\Users\\Алексей\\source\\repos\\LogicalParser123\\ZmeyaConsole\\ZmeyaConsole.csproj",
       "projectName": "ZmeyaConsole",
-      "projectPath": "C:\\Users\\Алексей\\Source\\Repos\\LogicalParser123\\ZmeyaConsole\\ZmeyaConsole.csproj",
+      "projectPath": "C:\\Users\\Алексей\\source\\repos\\LogicalParser123\\ZmeyaConsole\\ZmeyaConsole.csproj",
       "packagesPath": "C:\\Users\\Алексей\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Алексей\\Source\\Repos\\LogicalParser123\\ZmeyaConsole\\obj\\",
       "projectStyle": "PackageReference",
@@ -96,11 +96,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\Алексей\\Source\\Repos\\LogicalParser123\\ClassLibrary1\\ClassLibrary1.csproj": {
-              "projectPath": "C:\\Users\\Алексей\\Source\\Repos\\LogicalParser123\\ClassLibrary1\\ClassLibrary1.csproj"
+            "C:\\Users\\Алексей\\source\\repos\\LogicalParser123\\ClassLibrary1\\ClassLibrary1.csproj": {
+              "projectPath": "C:\\Users\\Алексей\\source\\repos\\LogicalParser123\\ClassLibrary1\\ClassLibrary1.csproj"
             },
-            "C:\\Users\\Алексей\\Source\\Repos\\LogicalParser123\\MyZmei\\MyZmei.csproj": {
-              "projectPath": "C:\\Users\\Алексей\\Source\\Repos\\LogicalParser123\\MyZmei\\MyZmei.csproj"
+            "C:\\Users\\Алексей\\source\\repos\\LogicalParser123\\MyZmei\\MyZmei.csproj": {
+              "projectPath": "C:\\Users\\Алексей\\source\\repos\\LogicalParser123\\MyZmei\\MyZmei.csproj"
             }
           }
         }

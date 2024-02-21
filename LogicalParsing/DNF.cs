@@ -5,8 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace LogicalParsing;
-public class DNF
+public class DNF(LogicalExpression exp)
 {
+    LogicalExpression LogicalExpression { get; init; } = exp;
     internal static DNF ToDNF(TruthTable truthTable)
     {
         return default;
