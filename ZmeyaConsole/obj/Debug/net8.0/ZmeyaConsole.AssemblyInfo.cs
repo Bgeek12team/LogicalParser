@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ZmeyaConsole")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dc97a8cb3f0d913978b92cdb20a6cff47cc13a76")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+717ec623b5ac99292612ad5dfd1d134b1b2e8f69")]
 [assembly: System.Reflection.AssemblyProductAttribute("ZmeyaConsole")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ZmeyaConsole")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

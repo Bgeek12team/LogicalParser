@@ -34,7 +34,7 @@ public class KNF(Expression exp)
                     .Select(j => GetTerm(truthTable.Table[i][j], truthTable.Headers[j]))) + ")");
             }
         }
-        cnf.AppendJoin(" & ", cnfTerms.ToArray());
+        cnf.AppendJoin(" & ", [.. cnfTerms]);
         return new KNF(new Expression(cnf.ToString()));
     }
 

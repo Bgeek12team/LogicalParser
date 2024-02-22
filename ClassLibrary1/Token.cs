@@ -35,7 +35,7 @@ public partial class Token(string str, Token.TYPE type, int precendency)
             { ">",    (TYPE.ARIPTHMETIC_BOOLEAN_OPERATOR, -1)},
             { "=>",   (TYPE.BOOLEAN_BOOLEAN_OPERATOR, -1)},
             { "=",    (TYPE.ARIPTHMETIC_BOOLEAN_OPERATOR, -1)},
-            { "&",    (TYPE.BOOLEAN_BOOLEAN_OPERATOR, -3)},
+            { "&",    (TYPE.BOOLEAN_BOOLEAN_OPERATOR, -1)},
             { "|",    (TYPE.BOOLEAN_BOOLEAN_OPERATOR, -2)},
             { "!",    (TYPE.BOOLEAN_FUNCTION, 3)},
             { "true", (TYPE.BOOLEAN_CONSTANT, NUMBER_PRECENDENCY)},
