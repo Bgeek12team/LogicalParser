@@ -1,21 +1,19 @@
 ﻿namespace MyZmei;
 
-public class CalculateFunction : IFunction
+public class SortFunction : IFunction
 {
-    public string StringValue { get; } = "calc";
+    public string StringValue { get; } = "sort";
     public string CalculateResult(string exp)
     {
-        var resExp = new ClassLibrary1.Expression(exp);
-
-        if (resExp.ParseTree())
-            return resExp.CalculateAt([], []).ToString();
-        else
-            return "incorrect variables";
+        var l = exp.Trim().Split(' ');
+        var b = l.Select(Convert.ToDouble);
+        return b.Order().Aggregate("", (a, b) => a + " " + b);
     }
+        
+
     public string TrimSelf(Expression tokens)
     {
         string res = "";
-
         foreach (var tk in tokens.Tokens)
         {
             if (tk.Type != TokenType.FUNCTION)

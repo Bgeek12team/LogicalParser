@@ -7,12 +7,13 @@ using System.Threading.Tasks;
 
 namespace MyZmei;
 
-public static class KNFFunction
+public class KNFFunction : IFunction
 {
-    public static string StringValue = "knf";
-    public static string CalculateResult(string exp) => new LogicalExpression(exp).GetKNF().ToString();
+    public string StringValue { get; } = "knf";
+    public string CalculateResult(string exp) 
+        => new LogicalExpression(exp).GetKNF()?.ToString() ?? "incorrect expression";
 
-    public static string TrimSelf(Expression tokens)
+    public string TrimSelf(Expression tokens)
     {
         string res = "";
         foreach (var tk in tokens.Tokens)

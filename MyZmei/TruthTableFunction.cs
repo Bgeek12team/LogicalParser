@@ -2,16 +2,16 @@
 
 namespace MyZmei;
 
-internal static class TruthTableFunction
+internal class TruthTableFunction : IFunction
 {
-    public static string StringValue = "ttable";
-    public static string CalculateResult(string exp)
+    public string StringValue { get; } = "ttable";
+    public string CalculateResult(string exp)
     {
         var expr = new ClassLibrary1.Expression(exp);
         return TruthTable.FillTable(expr)?.ToString() ?? "incorrect expression";
     }
 
-    public static string TrimSelf(Expression tokens)
+    public string TrimSelf(Expression tokens)
     {
         string res = "";
         foreach (var tk in tokens.Tokens)

@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 using LogicalParsing;
 
 namespace MyZmei;
-internal static class DNFFunction
+internal class DNFFunction : IFunction
 {
-    public static string StringValue = "dnf";
-    public static string CalculateResult(string exp) => new LogicalExpression(exp).GetDNF().ToString();
+    public string StringValue { get; } = "dnf";
+    public string CalculateResult(string exp) 
+        => new LogicalExpression(exp).GetDNF()?.ToString() ?? "incorrect expression";
 
-    public static string TrimSelf(Expression tokens)
+    public string TrimSelf(Expression tokens)
     {
         string res = "";
         foreach (var tk in tokens.Tokens)

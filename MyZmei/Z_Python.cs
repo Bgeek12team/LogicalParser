@@ -8,7 +8,7 @@ public static class Z_Python
 
     static Dictionary<string, string> lineComands = new()
     {
-        { "че там было до этого", $"{(history.Count > 0 ? history.Pop() : "куда попер")}" }
+        { "last", $"{(history.Count > 0 ? history.Pop() : "?")}" }
     };
 
     public static string Eval(string str)

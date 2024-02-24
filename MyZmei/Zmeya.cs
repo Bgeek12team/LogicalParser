@@ -35,56 +35,23 @@ public class Zmeya
     string Evaluate(Expression expr)
     {
         if (expr.Tokens.Length < 1)
-            return "плиз покорми змею выражениями";
-        if (expr.Tokens[0].StringValue == CalculateFunction.StringValue)
+            return "i need something to evaluate";
+        foreach(var function in Token.functions)
         {
-            var str = CalculateFunction.TrimSelf(expr);
-            str = ReplaceVariables(str);
-            return CalculateFunction.CalculateResult(str, variables);
+            if (expr.Tokens[0].StringValue == function.StringValue)
+            {
+                var str = function.TrimSelf(expr);
+                str = ReplaceVariables(str);
+                return function.CalculateResult(str);
+            }
         }
-        else if (expr.Tokens[0].StringValue == PrintFunction.StringValue)
-        {
-            var str = PrintFunction.TrimSelf(expr);
-            str = ReplaceVariables(str);
-            return PrintFunction.CalculateResult(str);
-        }
-        else if (expr.Tokens[0].StringValue == DNFFunction.StringValue)
-        {
-            var str = DNFFunction.TrimSelf(expr);
-            str = ReplaceVariables(str);
-            return DNFFunction.CalculateResult(str);
-        }
-        else if (expr.Tokens[0].StringValue == KNFFunction.StringValue)
-        {
-            var str = KNFFunction.TrimSelf(expr);
-            str = ReplaceVariables(str);
-            return KNFFunction.CalculateResult(str);
-        }
-        else if (expr.Tokens[0].StringValue == MinFunction.StringValue)
-        {
-            var str = MinFunction.TrimSelf(expr);
-            str = ReplaceVariables(str);
-            return MinFunction.CalculateResult(str);
-        }
-        else if (expr.Tokens[0].StringValue == SortFunction.StringValue)
-        {
-            var str = SortFunction.TrimSelf(expr);
-            str = ReplaceVariables(str);
-            return SortFunction.CalculateResult(str);
-        }
-        else if (expr.Tokens[0].StringValue == TruthTableFunction.StringValue)
-        {
-            var str = TruthTableFunction.TrimSelf(expr);
-            str = ReplaceVariables(str);
-            return TruthTableFunction.CalculateResult(str);
-        }
-        return "не хайп не шарю";
+        return "unknown function";
     }
 
     string ParseAssignment(Expression expr)
     {
         if (expr.Tokens.Length < 4)
-            return "присваивание через провозгласить делается, ты долбаеб?";
+            return "incorrect assignment";
 
         var potentialName = new VariableName(expr.Tokens[1].StringValue);
         var assignedString = "";
@@ -105,9 +72,9 @@ public class Zmeya
             }
         }
         if (found)
-            return $"нет, и будет {potentialName.Name} равным {value.Value}";
+            return $"reassigned {potentialName.Name} : {value.Value}";
         variables.Add(potentialName, value);
-        return $"да будет {potentialName.Name} равным {value.Value}";
+        return $"assigned {potentialName.Name} : {value.Value}";
 
     }
 }

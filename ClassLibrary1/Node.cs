@@ -34,9 +34,12 @@ public class Node<T>
     public void ForEach(Action<Node<T>> action)
     {
         action(this);
-        if (Left != null)
-            Left.ForEach(action);
-        if (Right != null)
-            Right.ForEach(action);
+        Left?.ForEach(action);
+        Right?.ForEach(action);
+    }
+
+    public override string ToString()
+    {
+        return (this.Left?.ToString() + " " + this.Value.ToString() + " " + this.Right?.ToString()).Trim();
     }
 }

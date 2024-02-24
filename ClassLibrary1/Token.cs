@@ -39,7 +39,9 @@ public partial class Token(string str, Token.TYPE type, int precendency)
             { "|",    (TYPE.BOOLEAN_BOOLEAN_OPERATOR, -2)},
             { "!",    (TYPE.BOOLEAN_FUNCTION, 3)},
             { "true", (TYPE.BOOLEAN_CONSTANT, NUMBER_PRECENDENCY)},
+            { "True", (TYPE.BOOLEAN_CONSTANT, NUMBER_PRECENDENCY)},
             { "false",(TYPE.BOOLEAN_CONSTANT, NUMBER_PRECENDENCY)},
+            { "False",(TYPE.BOOLEAN_CONSTANT, NUMBER_PRECENDENCY)},
 
         };
 
@@ -200,6 +202,11 @@ public partial class Token(string str, Token.TYPE type, int precendency)
     /// </summary>
     /// <returns>Тип токена и строку, его представляющую</returns>
     public override string ToString()
+    {
+        return this.TokenString;
+    }
+
+    public string GetStringInfo()
     {
         var res = $"[ string: {str} ;" +
             $"tokenType: {type} ;" +

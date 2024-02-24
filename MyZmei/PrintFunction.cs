@@ -1,11 +1,11 @@
 ﻿namespace MyZmei;
 
-public static class PrintFunction
+public class PrintFunction : IFunction
 {
-    public static string StringValue = "show";
-    public static string CalculateResult(string exp) => exp;
+    public string StringValue { get; } = "show";
+    public string CalculateResult(string exp) => exp;
 
-    public static string TrimSelf(Expression tokens)
+    public string TrimSelf(Expression tokens)
     {
         string res = "";
         foreach(var tk in tokens.Tokens)

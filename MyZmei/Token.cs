@@ -8,23 +8,24 @@ public class Token(string stringValue, TokenType type)
     private static readonly Dictionary<string, TokenType> tokens = new() {
         {"var", TokenType.DECLARATION},
         {"const", TokenType.DECLARATION},
+        {"let", TokenType.DECLARATION},
         {"положим", TokenType.DECLARATION},
         {"равным", TokenType.ASSIGNMENT_OPERATOR },
         {"равно", TokenType.ASSIGNMENT_OPERATOR },
         {"=", TokenType.ASSIGNMENT_OPERATOR },
-        {"!", TokenType.SEPARATOR },
+        {";", TokenType.SEPARATOR },
         {"?", TokenType.SEPARATOR },
         {".", TokenType.DOT }
     };
 
-    private static readonly List<string> functions = 
-        [CalculateFunction.StringValue,
-        PrintFunction.StringValue,
-        DNFFunction.StringValue,
-        KNFFunction.StringValue, 
-        MinFunction.StringValue,
-        SortFunction.StringValue,
-        TruthTableFunction.StringValue];
+    internal static List<IFunction> functions = 
+        [new CalculateFunction(),
+        new PrintFunction(),
+        new DNFFunction(),
+        new KNFFunction(),
+        new MinFunction(),
+        new SortFunction(),
+        new TruthTableFunction()];
 
     public static Token[] Tokenize(string str)
     {
@@ -56,7 +57,7 @@ public class Token(string stringValue, TokenType type)
             if (found) continue;
 
             found = false;
-            foreach (var fun in functions)
+            foreach (var fun in functions.Select(func => func.StringValue))
             {
                 if (str[start..].StartsWith(fun))
                 {

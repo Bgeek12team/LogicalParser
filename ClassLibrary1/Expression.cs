@@ -104,6 +104,7 @@ public class Expression(string expression)
     {
         if (!ParseTree())
             return double.NaN;
+
         if (!IsBooleanExpression)
         {
             var res = EvaluateAriphmeticExpression(TreeNode, variables);
@@ -117,6 +118,7 @@ public class Expression(string expression)
             return res;
         }
     }
+
     /// <summary>
     /// строит дерево парсинга по массиву токенов в постфиксной записи
     /// </summary>

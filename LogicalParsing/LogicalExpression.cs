@@ -27,13 +27,19 @@ public class LogicalExpression(string Expression)
     public DNF GetDNF()
     {
         truthTable ??= TruthTable.FillTable(new ClassLibrary1.Expression(Expression));
-        return DNF.ToDNF(truthTable);
+        if (truthTable != null)
+            return DNF.ToDNF(truthTable);
+        else
+            return null;
     }
 
     public KNF GetKNF()
     {
         truthTable ??= TruthTable.FillTable(new ClassLibrary1.Expression(Expression));
-        return KNF.ToKNF(truthTable);
+        if (truthTable != null)
+            return KNF.ToKNF(truthTable);
+        else
+            return null;
     }
 
 

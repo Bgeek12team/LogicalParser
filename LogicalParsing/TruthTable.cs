@@ -40,9 +40,30 @@ public class TruthTable(List<string> header, List<List<bool>> table)
     {
         if (!function.ParseTree() || !function.IsBooleanExpression)
             return null;
-        var headers = function.GetVariables();
+        var headers = FindVariables(function);
         var table = FillBody(function, headers);
         return new TruthTable(headers, table);
+    }
+
+    static List<string> FindVariables(Expression function)
+    {
+        var res = new List<string>();
+        RecursiveFindVariables(function.TreeNode, res);
+        return res;
+    }
+
+    static void RecursiveFindVariables(Node<Token> node, List<string> list)
+    {
+        if (node == null)
+            return;
+        if (node.Value.Type == Token.TYPE.ARIPTHMETIC_BOOLEAN_OPERATOR ||
+            (node.Value.Type == Token.TYPE.VARIABLE && node.Value.ExpectedType == typeof(bool)))
+        {
+            list.Add(node.ToString().Trim());
+            return;
+        }
+        RecursiveFindVariables(node.Left, list);
+        RecursiveFindVariables(node.Right, list);
     }
 
     static List<List<bool>> FillBody(Expression func, List<string> vars)
@@ -69,7 +90,12 @@ public class TruthTable(List<string> header, List<List<bool>> table)
             var curList = new List<bool>();
             foreach (var variable in vars)
                 curList.Add(dict[variable]);
-            var result = Convert.ToBoolean(func.CalculateAt([], dict));
+
+            string exp = func.StringExpression;
+            foreach (var kv in dict)
+                exp = exp.Replace(kv.Key, kv.Value.ToString());
+
+            var result = Convert.ToBoolean(new Expression(exp).CalculateAt([], dict));
             curList.Add(result);
             res.Add(curList);
         }
@@ -84,7 +110,12 @@ public class TruthTable(List<string> header, List<List<bool>> table)
             var curList = new List<bool>();
             foreach (var variable in vars)
                 curList.Add(dict[variable]);
-            var result = Convert.ToBoolean(func.CalculateAt([], dict));
+
+            string exp = func.StringExpression;
+            foreach (var kv in dict)
+                exp = exp.Replace(kv.Key, kv.Value.ToString());
+
+            var result = Convert.ToBoolean(new Expression(exp).CalculateAt([], dict));
             curList.Add(result);
             res.Add(curList);
         }
@@ -98,12 +129,12 @@ public class TruthTable(List<string> header, List<List<bool>> table)
     public override string ToString()
     {
         var sb = new StringBuilder();
-        sb.Append("headers: ");
+        sb.Append("headers: [");
         foreach (var header in Headers)
         {
-            sb.Append(header + " ");
+            sb.Append(header + "], [");
         }
-        sb.Remove(sb.Length - 1, 1);
+        sb.Remove(sb.Length - 3, 3);
         sb.Append('\n');
         foreach (var row in Table)
         {
