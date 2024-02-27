@@ -26,4 +26,9 @@ public record Expression
         }
         this.ExpressionType = ExpressionTypes.VOID;
     }
+
+    public override string ToString()
+    {
+        return Tokens.Aggregate("", (a, b) => a + " " + b.StringValue);
+    }
 };

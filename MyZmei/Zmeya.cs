@@ -15,22 +15,34 @@ public class Zmeya
         }
             
     }
-    string ReplaceVariables(string str)
+    string ReplaceVariables(Expression str)
     {
-        bool flag = false;
-        while (!flag)
+        bool flag = true;
+        var res = str.ToString();
+        Dictionary<string, bool> usedVariables = variables.Keys.ToDictionary(v => v.Name, v => false);
+        res = res.Replace(str.Tokens[0].StringValue, "");
+        while (flag)
         {
-            flag = true;
-            foreach (var key in variables.Keys)
+            flag = false;
+            foreach (var tk in str.Tokens[1..])
             {
-                if (str.Contains($"{key.Name}"))
+                if (tk.Type == TokenType.VARIABLE_NAME)
                 {
-                    str = str.Replace(key.Name, " " + variables[key].Value + " ");
-                    flag = false;
+                    foreach (var variable in variables.Keys)
+                    {
+                        if (tk.StringValue.Equals(variable.Name) &&
+                            !usedVariables[tk.StringValue])
+                        {
+                            res = res.Replace(tk.StringValue, variables[variable].Value);
+                            flag = true;
+                            usedVariables[tk.StringValue] = true;
+                        }
+                    }
                 }
             }
         }
-        return str;
+    
+        return res;
     }
     string Evaluate(Expression expr)
     {
@@ -40,8 +52,7 @@ public class Zmeya
         {
             if (expr.Tokens[0].StringValue == function.StringValue)
             {
-                var str = function.TrimSelf(expr);
-                str = ReplaceVariables(str);
+                var str = ReplaceVariables(expr);
                 return function.CalculateResult(str);
             }
         }
