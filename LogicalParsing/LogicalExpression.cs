@@ -41,6 +41,7 @@ public class LogicalExpression(string Expression)
         else
             return null;
     }
+    public TruthTable GetTruthTable() { return truthTable; }
 
 
 }

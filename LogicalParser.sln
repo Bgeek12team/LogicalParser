@@ -11,9 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyZmei", "MyZmei\MyZmei.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZmeyaConsole", "ZmeyaConsole\ZmeyaConsole.csproj", "{4E7F193D-C0E0-450F-9DE7-1BD25C0649CF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Forms", "Forms\Forms.csproj", "{66FB36BB-4D7D-4BBB-9E33-0483BA3AF295}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LogicalParsingTests1", "LogicalParsingTests1\LogicalParsingTests1.csproj", "{3E107748-5F50-4EA9-8C67-435A8549DC02}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogicalParsingTests1", "LogicalParsingTests1\LogicalParsingTests1.csproj", "{3E107748-5F50-4EA9-8C67-435A8549DC02}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Forms", "Forms\Forms.csproj", "{7B029E11-A265-441D-9B16-91763C24C905}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,14 +37,14 @@ Global
 		{4E7F193D-C0E0-450F-9DE7-1BD25C0649CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4E7F193D-C0E0-450F-9DE7-1BD25C0649CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4E7F193D-C0E0-450F-9DE7-1BD25C0649CF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{66FB36BB-4D7D-4BBB-9E33-0483BA3AF295}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{66FB36BB-4D7D-4BBB-9E33-0483BA3AF295}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{66FB36BB-4D7D-4BBB-9E33-0483BA3AF295}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{66FB36BB-4D7D-4BBB-9E33-0483BA3AF295}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3E107748-5F50-4EA9-8C67-435A8549DC02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3E107748-5F50-4EA9-8C67-435A8549DC02}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E107748-5F50-4EA9-8C67-435A8549DC02}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E107748-5F50-4EA9-8C67-435A8549DC02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B029E11-A265-441D-9B16-91763C24C905}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B029E11-A265-441D-9B16-91763C24C905}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B029E11-A265-441D-9B16-91763C24C905}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B029E11-A265-441D-9B16-91763C24C905}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

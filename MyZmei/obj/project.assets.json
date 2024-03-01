@@ -46,19 +46,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\MB_Markelov\\.nuget\\packages\\": {}
+    "C:\\Users\\Анна\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\MB_Markelov\\Documents\\GitHub\\LogicalParser\\MyZmei\\MyZmei.csproj",
+      "projectUniqueName": "C:\\Users\\Анна\\source\\repos\\LParse\\MyZmei\\MyZmei.csproj",
       "projectName": "MyZmei",
-      "projectPath": "C:\\Users\\MB_Markelov\\Documents\\GitHub\\LogicalParser\\MyZmei\\MyZmei.csproj",
-      "packagesPath": "C:\\Users\\MB_Markelov\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\MB_Markelov\\Documents\\GitHub\\LogicalParser\\MyZmei\\obj\\",
+      "projectPath": "C:\\Users\\Анна\\source\\repos\\LParse\\MyZmei\\MyZmei.csproj",
+      "packagesPath": "C:\\Users\\Анна\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Анна\\source\\repos\\LParse\\MyZmei\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\MB_Markelov\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Анна\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -72,11 +72,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\MB_Markelov\\Documents\\GitHub\\LogicalParser\\ClassLibrary1\\ClassLibrary1.csproj": {
-              "projectPath": "C:\\Users\\MB_Markelov\\Documents\\GitHub\\LogicalParser\\ClassLibrary1\\ClassLibrary1.csproj"
+            "C:\\Users\\Анна\\source\\repos\\LParse\\ClassLibrary1\\ClassLibrary1.csproj": {
+              "projectPath": "C:\\Users\\Анна\\source\\repos\\LParse\\ClassLibrary1\\ClassLibrary1.csproj"
             },
-            "C:\\Users\\MB_Markelov\\Documents\\GitHub\\LogicalParser\\LogicalParsing\\LogicalParsing.csproj": {
-              "projectPath": "C:\\Users\\MB_Markelov\\Documents\\GitHub\\LogicalParser\\LogicalParsing\\LogicalParsing.csproj"
+            "C:\\Users\\Анна\\source\\repos\\LParse\\LogicalParsing\\LogicalParsing.csproj": {
+              "projectPath": "C:\\Users\\Анна\\source\\repos\\LParse\\LogicalParsing\\LogicalParsing.csproj"
             }
           }
         }
@@ -85,11 +85,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -111,7 +106,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
