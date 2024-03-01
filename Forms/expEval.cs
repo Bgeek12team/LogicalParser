@@ -14,7 +14,7 @@ namespace Forms
 {
     public partial class ExpEval : Form
     {
-        private List<char> variables;
+        private List<string> variables;
         private string exp;
         private GroupBox groupBox;
         private List<TextBox> txBxInputs;
@@ -30,10 +30,10 @@ namespace Forms
         }
         public void FormOpen(Token[] tokens, string expression)
         {
-            variables = new List<char>();
+            variables = new List<string>();
             foreach (Token token in tokens)
-                if (token.Type.ToString() == "VARIABLE" && !variables.Contains(Convert.ToChar(token.TokenString)))
-                    variables.Add(Convert.ToChar(token.TokenString));
+                if (token.Type == Token.TYPE.VARIABLE && !variables.Contains(token.TokenString))
+                    variables.Add(token.TokenString);
             this.tokens = tokens;
             exp = expression;
             this.Show();
@@ -104,18 +104,28 @@ namespace Forms
         private void ButtonGetResult_Click(object? sender, EventArgs e)
         {
             var expression = new Expression(exp);
-            var variable = new Dictionary<string, double>();
+            var numericVariables = new Dictionary<string, double>();
+            var boolVariables = new Dictionary<string, bool>();
 
             for (int i = 0; i < variables.Count; i++)
             {
-                if (txBxInputs[i].Text.itsNum())
+                if (txBxInputs[i].Text.itsNum() )
                 {
-                    variable.Add(Convert.ToString(variables[i]), Convert.ToDouble(txBxInputs[i].Text));
-                } else { MessageBox.Show("Некорректное значение переменных!","ОШИБКА"); return; }
+                    numericVariables.Add(Convert.ToString(variables[i]), Convert.ToDouble(txBxInputs[i].Text));
+                } 
+                else if (txBxInputs[i].Text.itsBool())
+                {
+                    boolVariables.Add(Convert.ToString(variables[i]), Convert.ToBoolean(txBxInputs[i].Text));
+                }
+                else 
+                { 
+                    MessageBox.Show("Некорректное значение переменных!","ОШИБКА"); 
+                    return; 
+                }
                 
             }
             var inverse = Polish.ToInversePolishView(tokens);
-            rcBox_postFix.Text += "= " + Convert.ToString(expression.CalculateAt(variable, [])) + "\n Постфиксная запись:";
+            rcBox_postFix.Text += "= " + Convert.ToString(expression.CalculateAt(numericVariables, boolVariables)) + "\n Постфиксная запись:";
             
             foreach (var item in inverse)
                 rcBox_postFix.Text += $"\n{item}";

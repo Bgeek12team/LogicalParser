@@ -17,6 +17,10 @@ namespace Forms
         {
             return double.TryParse(num, out _);
         }
+        public static bool itsBool(this string num)
+        {
+            return bool.TryParse(num, out _);
+        }
         public static void BlinkColor(this Control control, Color color)
         {
             Color originalColor = control.BackColor;

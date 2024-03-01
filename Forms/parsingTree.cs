@@ -13,13 +13,13 @@ namespace Forms
         public static List<string> ParseTree(string expression)
         {
             result = new List<string>();
-            Dictionary<char, double> variables = new Dictionary<char, double>();
+            Dictionary<string, double> variables = new Dictionary<string, double>();
             var tokens = Token.Tokenize(expression);
             foreach (var item in tokens)
             {
                 if (item.Type == Token.TYPE.VARIABLE)
                 {
-                    variables.TryAdd(Convert.ToChar(item.TokenString), 1);
+                    variables.TryAdd(item.TokenString, 1);
                 }
             }
             var exp = new Expression(expression);
