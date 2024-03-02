@@ -39,8 +39,8 @@
             b2_GetListLex = new Button();
             b1_GetTreeLex = new Button();
             gB_LexAnal = new GroupBox();
-            rcTxBx_outData = new RichTextBox();
             bGetTableTruth = new Button();
+            rcTxBx_outData = new RichTextBox();
             groupBox1.SuspendLayout();
             gB_Controller.SuspendLayout();
             gB_LexAnal.SuspendLayout();
@@ -49,12 +49,12 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Times New Roman", 24F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            label1.Font = new Font("Times New Roman", 26.25F, FontStyle.Bold, GraphicsUnit.Point, 204);
             label1.Location = new Point(12, 9);
             label1.Name = "label1";
-            label1.Size = new Size(657, 36);
+            label1.Size = new Size(452, 40);
             label1.TabIndex = 0;
-            label1.Text = "Интерпретатор арифметических выражений";
+            label1.Text = "Интерпретатор выражений";
             // 
             // groupBox1
             // 
@@ -183,16 +183,6 @@
             gB_LexAnal.TabStop = false;
             gB_LexAnal.Text = "Лексический анализ";
             // 
-            // rcTxBx_outData
-            // 
-            rcTxBx_outData.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            rcTxBx_outData.Location = new Point(6, 31);
-            rcTxBx_outData.Name = "rcTxBx_outData";
-            rcTxBx_outData.ReadOnly = true;
-            rcTxBx_outData.Size = new Size(409, 230);
-            rcTxBx_outData.TabIndex = 1;
-            rcTxBx_outData.Text = "";
-            // 
             // bGetTableTruth
             // 
             bGetTableTruth.BackColor = SystemColors.ButtonFace;
@@ -205,6 +195,16 @@
             bGetTableTruth.Text = "Получить таблицу истинности";
             bGetTableTruth.UseVisualStyleBackColor = false;
             bGetTableTruth.Click += bGetTableTruth_Click;
+            // 
+            // rcTxBx_outData
+            // 
+            rcTxBx_outData.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            rcTxBx_outData.Location = new Point(6, 31);
+            rcTxBx_outData.Name = "rcTxBx_outData";
+            rcTxBx_outData.ReadOnly = true;
+            rcTxBx_outData.Size = new Size(409, 230);
+            rcTxBx_outData.TabIndex = 1;
+            rcTxBx_outData.Text = "";
             // 
             // Form1
             // 
