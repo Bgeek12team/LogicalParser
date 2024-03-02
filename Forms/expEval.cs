@@ -106,7 +106,6 @@ namespace Forms
             var expression = new Expression(exp);
             var numericVariables = new Dictionary<string, double>();
             var boolVariables = new Dictionary<string, bool>();
-
             for (int i = 0; i < variables.Count; i++)
             {
                 if (txBxInputs[i].Text.itsNum() )
@@ -125,7 +124,7 @@ namespace Forms
                 
             }
             var inverse = Polish.ToInversePolishView(tokens);
-            rcBox_postFix.Text += "= " + Convert.ToString(expression.CalculateAt(numericVariables, boolVariables)) + "\n Постфиксная запись:";
+            rcBox_postFix.Text = $"{exp} = " + Convert.ToString(expression.CalculateAt(numericVariables, boolVariables)) + "\n Постфиксная запись:";
             
             foreach (var item in inverse)
                 rcBox_postFix.Text += $"\n{item}";

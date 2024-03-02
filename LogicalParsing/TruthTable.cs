@@ -8,7 +8,7 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace LogicalParsing;
 /// <summary>
-/// Таблица истинности (читать блять умеем?)
+/// Таблица истинности
 /// </summary>
 /// <param name="Header"></param>
 /// <param name="Table"></param>
@@ -16,19 +16,6 @@ public class TruthTable(List<string> header, List<List<bool>> table)
 {
     public List<string> Headers { get; init; } = header;
     public List<List<bool>> Table { get; init; } = table;
-    // будет такая хуйня типа выражение A && B || !C
-    // Headers = {"A", "B", "C"}
-    // Table
-    // {false, false, false, true}
-    // {false, false, true, false}
-    // {false, true, false, true}
-    // {false, false, true, false}
-    // {true, false, false, true}
-    // {true, false, true, false}
-    // {true, true, false, true}
-    // {true, true, true, true}
-    // типа первые n столбцов это переменные в порядке хидера
-    // а дальше результат значения выраженияфух
 
     // 
     /// <summary>
